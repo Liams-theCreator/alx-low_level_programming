@@ -1,6 +1,7 @@
 #include<stdio.h>
 /**
- * This is the beginnig of main function*/
+ * This is the beginnig of main function
+ * */
 
 int main(void)
 {
