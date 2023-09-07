@@ -1,8 +1,10 @@
 #include<unistd.h>
 /**
- * main - Entry point 
+ * main - Entry point
  *
- * Return: 1 Awlays (Success)
+ * This program print string using wrtie function
+ *
+ * Return: Always 1 (Success)
  */
 int main(void)
 {
