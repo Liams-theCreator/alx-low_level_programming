@@ -13,7 +13,7 @@ int main(void)
 	{
 		putchar('0' + i);
 	}
-	printf("\n");
+	printf('\n');
 	return (0);
 }
 
