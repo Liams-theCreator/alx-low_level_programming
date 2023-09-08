@@ -2,6 +2,8 @@
 /**
  * main - Entry point
  *
+ * Printing alphabets except e and q 
+ *
  * Return : Always 0 (Success)
  */
 int main(void)
