@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _islower - Entry point
+ * _isalpha - Entry point
  * @c : printed char
  * checks for alphabetic char
  *
@@ -8,7 +8,7 @@
  * and 0 if there is an error
  */
 
-int _islower(int c)
+int _isalpha(int c)
 {
 
     if ((c >= 98 && c <= 122) || (c >= 65 && c <= 90))
