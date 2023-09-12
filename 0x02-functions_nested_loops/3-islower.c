@@ -4,7 +4,7 @@
  * @c : printed char
  * checks loweracase char
  *
- * return : 1 if c lowercase
+ * Return : 1 if c lowercase
  * and 0 if there is an error
  */
 
