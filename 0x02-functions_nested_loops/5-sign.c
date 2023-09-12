@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _print_sign - Entry point
+ * print_sign - Entry point
  * @n : printed int
  * print n and check if its greater,less than 0 or equal to 0
  *
