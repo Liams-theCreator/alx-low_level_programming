@@ -1,20 +1,22 @@
 #include "main.h"
+
 /**
- * _islower - Entry point
- * checks loweracase char
+ * print_alphabet_x10 - Entry point
  *
- * return : 1 if c lowercase, else , return 0;
+ * Return: Always 0 (Success)
  */
-
-int _islower(int c)
+void print_alphabet_x10(void)
 {
+	char str;
+	int i = 0;
 
-	if (c >= 97 && c <= 122)
+	while (i < 10)
 	{
-		return (1);
-	}
-	else
-	{
-		return (0);
+		for (str = 'a'; str <= 'z'; str++)
+		{
+			_putchar(str);
+		}
+		i++;
+		_putchar('\n');
 	}
 }
