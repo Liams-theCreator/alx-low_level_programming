@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * _isupper - Entry point
  * @c : ascii value
@@ -10,7 +11,6 @@
 
 int _isupper(char c)
 {
-
 	if (c >= 'a' && c <= 'z')
 	{
 		return (0);
