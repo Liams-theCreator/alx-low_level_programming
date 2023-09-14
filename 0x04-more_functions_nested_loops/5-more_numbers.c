@@ -10,12 +10,12 @@ void more_numbers(void)
 	{
 		if (i <= 9)
 		{
-			putchar('0' + i);
+			_putchar('0' + i);
 		}
 		else
 		{
-			putchar('1');
-			putchar('0' + (i - 10));
+			_putchar('1');
+			_putchar('0' + (i - 10));
 		}
 	}
 }
