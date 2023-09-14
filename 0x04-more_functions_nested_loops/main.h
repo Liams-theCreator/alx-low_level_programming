@@ -1,8 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
-#include <stdio.h>
 
-int _putchar(char c);
+int _putchar(char);
 int _isupper(char c);
 int _isdigit(char c);
 int mul(int a, int b);
@@ -12,4 +11,4 @@ void more_numbers(void);
 void print_line(int n);
 void print_diagonal(int n);
 
-#endif
+#endif /* MAIN_H */
