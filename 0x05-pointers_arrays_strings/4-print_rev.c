@@ -3,7 +3,7 @@
 /**
  * print_rev - print string in reverse
  *
- * @s: char
+ * @s: pointer to char
  */
 
 void print_rev(char *s)

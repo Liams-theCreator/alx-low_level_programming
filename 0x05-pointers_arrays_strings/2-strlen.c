@@ -3,7 +3,7 @@
 /**
  * _strlen - count length of string
  *
- * @s: char
+ * @s: pointer to char
  *
  * Return: return the length
  */

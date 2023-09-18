@@ -4,7 +4,7 @@
  * swap_int - swap two integers
  *
  * @a: first int
- * @b: second	int
+ * @b: second int
  *
  */
 
