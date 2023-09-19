@@ -16,9 +16,10 @@ int _atoi(char *s)
 
 	while (s[i] != '\0')
 	{
-		if ((s[i] == 32 && s[i] == 47) || s[i] == '\t')
+		if (s[i] == ' ' || s[i] == '\t')
 		{
 			i++;
+			continue;
 		}
 
 		if (s[i] == '-')
