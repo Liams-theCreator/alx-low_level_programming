@@ -38,6 +38,7 @@ int _atoi(char *s)
 			result = result * 10 + (s[i] - '0');
 			i++;
 		}
+		return (sign * result);
 	}
-	return (sign * result);
+	return (0);
 }
