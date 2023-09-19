@@ -16,7 +16,7 @@ int _atoi(char *s)
 
 	while (s[i] != '\0')
 	{
-		if (s[i] == ' ' || s[i] == '\t')
+		if ((s[i] == 32 && s[i] == 47) || s[i] == '\t')
 		{
 			i++;
 		}
@@ -38,5 +38,5 @@ int _atoi(char *s)
 			i++;
 		}
 	}
-	return sign * result;
+	return (sign * result);
 }
