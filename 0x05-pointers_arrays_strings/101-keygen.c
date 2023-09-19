@@ -2,26 +2,53 @@
 #include <stdlib.h>
 #include <time.h>
 
-/**
- * main - Generates random passwords 101-crackme
- *
- * Return: Always 0
- */
+#define PASSWORD_LENGTH 84
+#define MIN_CHAR 33
+#define MAX_CHAR 126
+#define PASSWORD_SUM 2772
 
+/**
+ * main - function that generates a password and prints it to the console.
+ *
+ * Return: Always 0 (success)
+ *
+ */
 int main(void)
 {
-
-  int sum = 0;
-  char random;
+  char password[PASSWORD_LENGTH + 1];
+  int i, sum = 0, diff, a, b;
 
   srand(time(NULL));
-  while (sum <= 2772)
-  {
-    random = rand() % 128;
-    sum += random;
-    putchar(random);
-  }
-  putchar(2772 - sum);
 
-  return (0);
+  while (sum < PASSWORD_SUM)
+  {
+    password[i] = MIN_CHAR + rand() % (MAX_CHAR - MIN_CHAR + 1);
+    sum += password[i];
+    i++;
+  }
+  password[i] = '\0';
+
+  diff = sum - PASSWORD_SUM;
+  a = diff / 2;
+  b = diff - a;
+
+  for (i = 0; password[i]; i++)
+  {
+    if (password[i] >= MIN_CHAR + a)
+    {
+      password[i] -= a;
+      break;
+    }
+  }
+  for (i = 0; password[i]; i++)
+  {
+    if (password[i] >= MIN_CHAR + b)
+    {
+      password[i] -= b;
+      break;
+    }
+  }
+
+  printf("%s", password);
+  return 0;
 }
