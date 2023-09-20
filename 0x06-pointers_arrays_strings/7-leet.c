@@ -12,12 +12,11 @@ char *leet(char *s)
 {
 	char alpha[] = "aeotl";
 	char num[] = "43071";
-	int i = 0;
-	int j = 0;
+	int i, j;
 
-	for (; s[i] != '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (; alpha[j] != '\0'; j++)
+		for (j = 0; alpha[j] != '\0'; j++)
 		{
 			if (s[i] == alpha[j] || s[i] == alpha[j] - 32)
 				s[i] = num[j];
