@@ -6,22 +6,25 @@
  * @haystack: the string to be scanned
  * @needle: the string to be searched in haystack
  *
- * Return: a pointer to the beginning of the located substring or NULL if the subtring is not found
+ * Return: 0
  */
 
 char *_strstr(char *haystack, char *needle)
 {
-	unsigned int i, j;
-
-	for (i = 0; haystack[i] != '\0'; i++)
+	for (; *haystack != '\0'; haystack++)
 	{
-		for (j = 0; needle[j] != '\0'; j++)
+		char *l = haystack;
+		char *p = needle;
+
+		while (*l == *p && *p != '\0')
 		{
-			if (needle[j] != haystack[i + j])
-				break;
+			l++;
+			p++;
 		}
-		if (needle[j] == '\0')
-			return (haystack + i);
+
+		if (*p == '\0')
+			return (haystack);
 	}
-	return (NULL);
+
+	return (0);
 }
