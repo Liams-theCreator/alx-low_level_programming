@@ -8,7 +8,7 @@
  * and 0 if there is an error
  */
 
-int _isupper(char c)
+int _isupper(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 	{

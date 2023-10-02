@@ -8,7 +8,7 @@
  * and 0 if there is an error
  */
 
-int _isdigit(char c)
+int _isdigit(int c)
 {
 
 	if (c >= '0' && c <= '9')
