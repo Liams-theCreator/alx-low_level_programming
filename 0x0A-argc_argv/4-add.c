@@ -1,17 +1,40 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
- * main - printing the program's name
+ * main - addition of two integers
  *
  * @argc: argument count
  * @argv: argument vector
  *
- * Return: first index of argv
+ * Return: result of addition , if no number passed return Error
  */
 
-int main(int argc, char argv[])
+int main(int argc, char *argv[])
 {
-	(void)argc;
+	int result = 0;
+	int i, j;
 
-	printf("%s\n", argv[0]);
+	if (argc < 2)
+	{
+		printf("0\n");
+		return (0);
+	}
+
+	for (i = 1; argv[i] != NULL; i++)
+	{
+		for (j = 0; argv[i][j] != '\0'; j++)
+		{
+			if (argv[i][j] < '0' || argv[i][j] > '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
+		result += atoi(argv[i]);
+	}
+
+	printf("%d\n", result);
+
+	return (0);
 }
