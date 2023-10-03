@@ -49,6 +49,11 @@ char *str_concat(char *s1, char *s2)
 	length2 = _strlen(s2);
 	mem = (char *)malloc((length1 + length2 + 1) * sizeof(char));
 
+	if (mem == NULL)
+	{
+		return (NULL);
+	}
+
 	for (i = 0; i < length1; i++)
 	{
 		mem[i] = s1[i];
