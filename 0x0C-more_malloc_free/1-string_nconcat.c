@@ -67,7 +67,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		con[length1 + j] = s2[j];
 	}
-	con[length1 + length2] = '\0';
+	con[length1 + n] = '\0';
 
 	return (con);
 }
