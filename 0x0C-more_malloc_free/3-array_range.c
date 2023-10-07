@@ -63,24 +63,24 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 int *array_range(int min, int max)
 {
-	int *arr, i;
-	unsigned int ts;
+	int *arr;
+	int ts, i;
 
 	if (min > max)
 	{
 		return (NULL);
 	}
 
-	ts = max - min + 1;
+	ts = max - min;
 
-	arr = (int *)_calloc(ts, sizeof(int));
+	arr = (int *)_calloc(ts + 1, sizeof(int));
 
 	if (arr == NULL)
 	{
 		return (NULL);
 	}
 
-	for (i = 0; i < ts; i++)
+	for (i = 0; i <= ts; i++)
 	{
 		arr[i] = min + i;
 	}
