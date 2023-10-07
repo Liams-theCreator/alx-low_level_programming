@@ -60,6 +60,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
  * Return: A pointer to the newly created array. NULL if min > max or if
  *         malloc fails.
  */
+
 int *array_range(int min, int max)
 {
 	int *arr, i = 0;
