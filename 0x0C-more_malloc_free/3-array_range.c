@@ -71,16 +71,16 @@ int *array_range(int min, int max)
 		return (NULL);
 	}
 
-	ts = max - min;
+	ts = max - min + 1;
 
-	arr = (int *)_calloc(ts + 1, sizeof(int));
+	arr = (int *)_calloc(ts, sizeof(int));
 
 	if (arr == NULL)
 	{
 		return (NULL);
 	}
 
-	for (i = 0; i <= ts; i++)
+	for (i = 0; i < ts; i++)
 	{
 		arr[i] = min + i;
 	}
