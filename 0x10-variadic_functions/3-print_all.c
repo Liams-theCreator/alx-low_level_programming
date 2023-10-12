@@ -10,21 +10,22 @@
 
 void print_all(const char *const format, ...)
 {
-	unsigned int i = 0;
-	va_list args;
+	int i = 0;
 	char *stri, *separator = "";
+	va_list args;
 
 	va_start(args, format);
-	while (format[i])
+	while (format != NULL && format[i] != '\0')
 	{
+		separator = "";
 		switch (format[i])
 		{
-		case 'c':
-			printf("%c", va_arg(args, int));
-			separator = ", ";
-			break;
 		case 'i':
 			printf("%d", va_arg(args, int));
+			separator = ", ";
+			break;
+		case 'c':
+			printf("%c", va_arg(args, int));
 			separator = ", ";
 			break;
 		case 'f':
@@ -36,12 +37,10 @@ void print_all(const char *const format, ...)
 			separator = ", ";
 			if (stri == NULL)
 			{
-				printf("%s(nil)");
+				printf("(nil)");
+				break;
 			}
-			else
-			{
-				printf("%s", stri);
-			}
+			printf("%s", stri);
 			break;
 		}
 		i++;
