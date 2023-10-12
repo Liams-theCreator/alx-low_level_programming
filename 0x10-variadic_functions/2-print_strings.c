@@ -2,6 +2,7 @@
 
 /**
  * print_strings - Prints strings, followed by a new line.
+ *
  * @separator: The string to be printed between strings.
  * @n: The number of strings passed to the function.
  * @...: The strings to be printed.
@@ -11,13 +12,13 @@
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
-	char *strings;
-	va_list stri;
+	char *string;
+	va_list str;
 
-	va_start(stri, n);
+	va_start(str, n);
 	for (i = 0; i < n; i++)
 	{
-		stri = va_arg(strings, *char);
+		string = va_arg(str, *char);
 
 		if (string == NULL)
 		{
@@ -25,7 +26,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		}
 		else
 		{
-			printf("%s", strings);
+			printf("%s", string);
 		}
 		if (separator != NULL && i < n - 1)
 		{
@@ -33,5 +34,5 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		}
 	}
 	printf("\n");
-	va_end(stri);
+	va_end(str);
 }
