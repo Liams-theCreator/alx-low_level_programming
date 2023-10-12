@@ -7,6 +7,7 @@
  * @n: The number of integers passed to the function.
  * @...: The integers to be printed.
  *
+ * Return: nubmers
  */
 
 void print_numbers(const char *separator, const unsigned int n, ...)
