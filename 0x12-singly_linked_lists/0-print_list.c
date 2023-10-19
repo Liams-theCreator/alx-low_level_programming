@@ -8,18 +8,18 @@
 
 size_t print_list(const list_t *h)
 {
-	size_t len;
+	const list_t *local_head;
+	size_t n_element = 0;
 
-	for (len = 0; h != NULL; len++; h = > h.next)
+	local_head = h;
+	while (local_head != NULL)
 	{
-		if (h->str == NULL)
-		{
+		if (!local_head->str)
 			printf("[0] (nil)\n");
-		}
 		else
-		{
-			printf("[%d] %s\n", h->len, h->str);
-		}
+			printf("[%d] %s\n", local_head->len, local_head->str);
+		n_element++;
+		local_head = local_head->next;
 	}
-	return (len);
+	return (n_element);
 }
