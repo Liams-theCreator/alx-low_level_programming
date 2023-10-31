@@ -1,25 +1,6 @@
 #include "main.h"
 
 /**
- * _strlen - count length of string
- *
- * @s: pointer to char
- *
- * Return: return the length
- */
-int _strlen(char *s)
-{
-	int i = 0;
-
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-
-	return (i);
-}
-
-/**
  * create_file - Create a file and write text content to it.
  *
  * @filename: Name of the file to create or truncate.
@@ -27,6 +8,7 @@ int _strlen(char *s)
  *
  * Return: 1 on success, -1 on failure.
  */
+
 int create_file(const char *filename, char *text_content)
 {
 	int fd;
