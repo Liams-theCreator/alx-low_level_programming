@@ -4,8 +4,8 @@
  * hash_table_set - adds element to the hash table
  * @ht: pointer to hash table
  * @key: key string
- * @value: value asociated with the key
- * Return: 1 if succeded, 0 if failed
+ * @value: value associated with the key
+ * Return: 1 if succeeded, 0 if failed
  */
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
@@ -34,6 +34,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	node->key = strdup(key);
 	node->value = strdup(value);
+	node->next = ht->array[index]; /* to biginin */
+	ht->array[index] = node;
 
 	return (1);
 }
