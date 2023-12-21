@@ -15,7 +15,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (!ht || !key || !key[0])
 	{
-		return 0;
+		return (0);
 	}
 
 	index = key_index((unsigned char *)key, ht->size);
@@ -37,7 +37,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	node->key = strdup(key);
 	node->value = strdup(value);
-	node->next = ht->array[index];
+
+	node->next = ht->array[index]; /* to biginin */
 	ht->array[index] = node;
 
 	return (1);
