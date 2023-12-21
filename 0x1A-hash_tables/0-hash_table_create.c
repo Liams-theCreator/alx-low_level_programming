@@ -19,7 +19,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	}
 
 	tableau->size = size;
-	tableau->array = calloc(size, sizeof(hash_node_t));
+	tableau->array = calloc(size, sizeof(hash_node_t *));
 	if (tableau->array == NULL)
 	{
 		free(tableau);
