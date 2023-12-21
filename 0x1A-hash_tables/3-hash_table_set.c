@@ -20,7 +20,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	index = key_index((unsigned char *)key, ht->size);
 	node = ht->array[index];
-	while (node)
+	while (node) /* klimogin check if key found update it*/
 	{
 		if (strcmp(node->key, key) == 0)
 		{
