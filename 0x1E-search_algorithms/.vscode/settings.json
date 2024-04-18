@@ -1,0 +1,17 @@
+{
+    "name": "project_printf",
+    "description": "building a copy standartd library's printf function",
+    "editor.detectIndentation": false,
+    "editor.fontSize": 16,
+    "editor.autoClosingBrackets": "languageDefined",
+    "editor.trimAutoWhitespace": true,
+    "editor.fontFamily": "Consolas, 'Courier New', monospace",
+    "editor.tabSize": 8,
+    "editor.insertSpaces": false,
+    "files.associations": {
+	"stdlib.h": "c",
+	"stat.h": "c",
+	"string.h": "c",
+	"stdio.h": "c"
+},
+}
